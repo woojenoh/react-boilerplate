@@ -1,0 +1,9 @@
+@import '../../shared/mediaQuery.scss';
+@import '../../shared/color.scss';
+
+.title {
+  color: $tmon-orange;
+  @include mobile {
+    color: blue;
+  }
+}
