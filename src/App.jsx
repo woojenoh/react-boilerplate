@@ -1,13 +1,12 @@
 import React from 'react';
-import { BrowserRouter as Router } from 'react-router-dom';
-import history from './utils/history';
+import { BrowserRouter } from 'react-router-dom';
 import Pages from './pages/index.jsx';
 
 function App() {
   return (
-    <Router history={history}>
+    <BrowserRouter>
       <Pages />
-    </Router>
+    </BrowserRouter>
   );
 }
 
