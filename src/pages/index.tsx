@@ -1,7 +1,7 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
-import Main from './Main/Main.jsx';
-import MyPage from './MyPage/MyPage.jsx';
+import Main from './Main/Main';
+import MyPage from './MyPage/MyPage';
 
 // Routing Component
 function index() {
