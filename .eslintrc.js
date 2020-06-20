@@ -6,12 +6,14 @@ module.exports = {
   },
   extends: [
     'eslint:recommended',
-    'plugin:react/recommended'
+    'plugin:react/recommended',
+    'plugin:@typescript-eslint/eslint-recommended'
   ],
   globals: {
     Atomics: 'readonly',
     SharedArrayBuffer: 'readonly'
   },
+  parser: "@typescript-eslint/parser",
   parserOptions: {
     ecmaFeatures: {
       jsx: true
@@ -19,7 +21,15 @@ module.exports = {
     ecmaVersion: 2018,
     sourceType: 'module'
   },
-  plugins: ['react'],
+  plugins: [
+    'react',
+    "@typescript-eslint"
+  ],
+  settings: {
+    react: {
+      version: "detect"
+    }
+  },
   rules: {
     indent: ['error', 2],
     'linebreak-style': ['error', 'windows'],
