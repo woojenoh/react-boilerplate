@@ -21,16 +21,16 @@ module.exports = (env, argv) => {
         {
           test: /\.(js|jsx|ts|tsx)$/,
           exclude: /node_modules/,
-          use: ['babel-loader']
+          use: ['babel-loader'],
         },
         {
           test: /\.html$/,
           use: [
             {
               loader: 'html-loader',
-              options: { minimize: true }
-            }
-          ]
+              options: { minimize: true },
+            },
+          ],
         },
         {
           test: /\.(css|scss)$/,
@@ -38,13 +38,13 @@ module.exports = (env, argv) => {
             argv.mode === 'development' ? 'style-loader' : MiniCssExtractPlugin.loader, // for HMR
             'css-loader',
             'sass-loader',
-          ]
+          ],
         },
         {
           test: /\.(png)$/,
-          use: ['file-loader']
+          use: ['file-loader'],
         },
-      ]
+      ],
     },
     resolve: {
       extensions: [
@@ -52,13 +52,13 @@ module.exports = (env, argv) => {
         '.js',
         '.jsx',
         '.ts',
-        '.tsx'
-      ]
+        '.tsx',
+      ],
     },
     optimization: {
       splitChunks: {
         chunks: 'all',
-        name: 'vendors'
+        name: 'vendors',
       },
     },
     plugins: [
@@ -67,11 +67,11 @@ module.exports = (env, argv) => {
       new FriendlyErrorsWebpackPlugin(),
       new HtmlWebpackPlugin({
         template: './src/index.html',
-        filename: './index.html'
+        filename: './index.html',
       }),
       new MiniCssExtractPlugin({
         filename: '[name].css',
-        chunkFilename: '[id].css'
+        chunkFilename: '[id].css',
       }),
       new SizePlugin(),
     ],
@@ -82,6 +82,6 @@ module.exports = (env, argv) => {
       overlay: true,
       historyApiFallback: true,
       port: 4000,
-    }
+    },
   };
 };
