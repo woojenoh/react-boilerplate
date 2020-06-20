@@ -1,11 +1,11 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
-import Navigation from '../components/Navigation/Navigation';
-import Main from './Main/Main';
-import MyPage from './MyPage/MyPage';
+import Navigation from '../components/Navigation';
+import Main from './Main';
+import MyPage from './MyPage';
 
 // Routing Component
-const index: React.FC = () => {
+const Pages: React.FC = () => {
   return (
     <>
       <Navigation/>
@@ -17,4 +17,4 @@ const index: React.FC = () => {
   );
 };
 
-export default index;
+export default Pages;

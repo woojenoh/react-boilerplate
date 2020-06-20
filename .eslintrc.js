@@ -13,7 +13,7 @@ module.exports = {
     Atomics: 'readonly',
     SharedArrayBuffer: 'readonly'
   },
-  parser: "@typescript-eslint/parser",
+  parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {
       jsx: true
@@ -23,17 +23,21 @@ module.exports = {
   },
   plugins: [
     'react',
-    "@typescript-eslint"
+    '@typescript-eslint'
   ],
   settings: {
     react: {
-      version: "detect"
+      version: 'detect'
     }
   },
   rules: {
     indent: ['error', 2],
     'linebreak-style': ['error', 'windows'],
     quotes: ['error', 'single'],
-    semi: ['error', 'always']
+    semi: ['error', 'always'],
+    'comma-dangle': ['error', 'always-multiline'],
+    'block-spacing': 'error',
+    'arrow-spacing': 'error',
+    'template-curly-spacing': 'error'
   }
 };
