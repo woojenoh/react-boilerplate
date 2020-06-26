@@ -40,6 +40,7 @@ module.exports = {
     'comma-dangle': ['error', 'always-multiline'],
     'block-spacing': 'error',
     'arrow-spacing': 'error',
-    'template-curly-spacing': 'error'
+    'template-curly-spacing': 'error',
+    '@typescript-eslint/no-unused-vars': [2, { args: 'none' }]
   }
 };
