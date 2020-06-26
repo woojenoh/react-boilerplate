@@ -4,9 +4,9 @@ type UseInput = [string, JSX.Element]
 
 interface UseInputParams {
   type: string;
-  className: string;
-  placeholder: string;
-  required: boolean;
+  className?: string;
+  placeholder?: string;
+  required?: boolean;
 }
 
 const useInput = ({ type, className, placeholder, required }: UseInputParams): UseInput => {

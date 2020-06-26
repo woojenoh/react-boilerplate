@@ -12,7 +12,7 @@ interface Props {
 const MyPage: React.FC<Props> = () => {
   const todos = useSelector((state: RootState) => state.todo);
   const dispatch = useDispatch();
-  const [todoValue, todoInput] = useInput({ type: 'text', className: 'input', placeholder: '', required: true });
+  const [todoValue, todoInput] = useInput({ type: 'text' });
 
   return (
     <div>
