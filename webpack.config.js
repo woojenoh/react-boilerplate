@@ -11,6 +11,7 @@ module.exports = (env, argv) => {
   console.log('Build', argv.mode);
 
   return {
+    devtool: argv.mode !== 'production' ? 'source-map' : '',
     entry: './src/index.tsx',
     output: {
       filename: '[name].bundle.js',
@@ -36,7 +37,7 @@ module.exports = (env, argv) => {
         {
           test: /\.(css|scss)$/,
           use: [
-            argv.mode === 'development' ? 'style-loader' : MiniCssExtractPlugin.loader, // for HMR
+            !argv.mode ? 'style-loader' : MiniCssExtractPlugin.loader, // for HMR
             'css-loader',
             'sass-loader',
           ],
@@ -57,6 +58,7 @@ module.exports = (env, argv) => {
       ],
     },
     optimization: {
+      minimize: argv.mode === 'production' ? true : false,
       splitChunks: {
         chunks: 'all',
         name: 'vendors',

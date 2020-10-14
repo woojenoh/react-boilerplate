@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "description": "React boilerplate",
   "scripts": {
-    "build": "webpack --mode production",
-    "start": "webpack-dev-server --mode development --open",
+    "build": "jest && webpack --mode=production",
+    "build-dev": "jest && webpack --mode=development",
+    "start": "webpack-dev-server --open",
     "test": "jest"
   },
   "repository": {
