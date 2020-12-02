@@ -34,13 +34,14 @@ module.exports = {
   },
   rules: {
     indent: ['error', 2],
-    'linebreak-style': ['error', 'windows'],
+    'linebreak-style': ['error', 'unix'],
     quotes: ['error', 'single'],
     semi: ['error', 'always'],
     'comma-dangle': ['error', 'always-multiline'],
     'block-spacing': 'error',
     'arrow-spacing': 'error',
     'template-curly-spacing': 'error',
-    '@typescript-eslint/no-unused-vars': [2, { args: 'none' }]
+    '@typescript-eslint/no-unused-vars': [2, { args: 'none' }],
+    'object-curly-spacing': ['error', 'always'],
   }
 };

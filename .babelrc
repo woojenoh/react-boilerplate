@@ -1,16 +1,16 @@
 {
   "presets": [
-    "@babel/preset-env",
-    "@babel/typescript",
-    "@babel/preset-react"
-  ],
-  "plugins": [
     [
-      "@babel/proposal-class-properties",
-      {
-        "loose": true
+      "@babel/preset-env", {
+        "targets": {
+          "browsers" : ["last 2 versions", "ie >= 10"]
+        },
+        "useBuiltIns": "usage",
+        "corejs": 3,
+        "shippedProposals": true
       }
     ],
-    "@babel/proposal-object-rest-spread"
+    "@babel/typescript",
+    "@babel/preset-react"
   ]
 }
